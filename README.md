@@ -10,9 +10,11 @@ There be dragons, proceed at your own risk.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add these lines to your application's Gemfile:
 ```ruby
-gem 'capistrano3-foreman'
+source "https://GzGU_Ayc1Bvnz2HTFNJV@repo.fury.io/drizly-eng/" do
+  gem 'capistrano3-foreman'
+end
 ```
 And then execute:
 ```bash
@@ -100,3 +102,12 @@ RAILS_ENV=staging
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+### Deployment to Gemfury
+Make sure you have permissions to deploy to gemfury. It is also a good practice to increment the
+version.
+
+```bash
+git remote add fury https://git.fury.io/drizly-eng/capistrano3-foreman.git
+git push fury HEAD
+```
